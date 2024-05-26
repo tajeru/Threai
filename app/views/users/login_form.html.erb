@@ -1,0 +1,39 @@
+
+<%= form_tag('login', method: 'post', data: { turbo: false }) do %>
+  <div class="d-flex justify-content-center align-items-center vh-100 bg-gray-800">
+    <div class="card shadow p-4 text-white bg-dark" style="width: 24rem;">
+      <h5 class="card-title text-center mb-4">Login</h5>
+
+      <% if flash[:error_message] %>
+        <div class="alert alert-danger">
+          <%= flash[:error_message] %>
+        </div>
+      <% end %>
+
+      <div class="mb-3">
+        <div class="row">
+          <div class="col-4">
+            <%= label_tag :name, "Name", class: "form-label" %>
+          </div>
+          <div class="col-8">
+            <%= text_field_tag :name, params[:name], placeholder: params[:name], class: "form-control border-radius-8 height-form", id: "inputName" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="row">
+          <div class="col-4">
+            <%= label_tag :password, "Password", class: "form-label" %>
+          </div>
+          <div class="col-8">
+            <%= password_field_tag :password, nil, placeholder: "", class: "form-control border-radius-8 height-form", id: "inputPassword" %>
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          </div>
+        </div>
+      </div>
+
+      <%= submit_tag "Login", class: "btn btn-lg btn-light fw-bold border-black btn_bg_blue  w-100 " %>
+    </div>
+  </div>
+<% end %>
