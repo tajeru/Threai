@@ -36913,3 +36913,63 @@ Importmap skipped missing path: turbo.min.js
 Completed 200 OK in 91ms (Views: 84.1ms | ActiveRecord: 0.5ms | Allocations: 90921)
 
 
+Started GET "/" for ::1 at 2024-05-27 21:41:05 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 25ms (ActiveRecord: 1.0ms | Allocations: 20371)
+
+
+Started GET "/posts/index" for ::1 at 2024-05-27 21:41:05 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (0.0ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 19454)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 26339)
+Completed 200 OK in 30ms (Views: 20.6ms | ActiveRecord: 0.6ms | Allocations: 32215)
+
+
+Started GET "/about/top" for ::1 at 2024-05-27 21:41:08 +0900
+Processing by AboutController#top as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering about/top.html.erb within layouts/application
+  Rendered about/top.html.erb within layouts/application (Duration: 0.7ms | Allocations: 137)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 734)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 1757)
+
+
+Started GET "/posts/index" for ::1 at 2024-05-27 21:41:09 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (0.5ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 2646)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3226)
+Completed 200 OK in 18ms (Views: 13.4ms | ActiveRecord: 1.0ms | Allocations: 4070)
+
+
