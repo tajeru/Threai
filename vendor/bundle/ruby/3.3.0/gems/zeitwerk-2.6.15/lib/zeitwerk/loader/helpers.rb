@@ -142,15 +142,13 @@ module Zeitwerk::Loader::Helpers
     parent.const_defined?(cname, false)
   end
 
+ 
+
   # @raise [NameError]
-# @sig (Module, Symbol) -> Object
-private def cget(parent, cname)
-  begin
-    parent.const_get(cname, false)
-  rescue NameError
-    puts "NameError: uninitialized constant #{parent}::#{cname}"
+  # @sig (Module, Symbol) -> Object
+  private def crem(parent, cname)
+    parent.__send__(:remove_const, cname)
   end
-end
 
   CNAME_VALIDATOR = Module.new
   private_constant :CNAME_VALIDATOR
