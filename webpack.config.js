@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   entry: './app/javascript/application.js',
   output: {
@@ -37,6 +39,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    modules: [path.resolve(__dirname, 'app/javascript'), 'node_modules'],
   },
   devServer: {
     contentBase: path.join(__dirname, 'public'),

@@ -12,8 +12,8 @@
   <%= csp_meta_tag %>
   <%= javascript_importmap_tags %>
   <%= stylesheet_link_tag "application", "custom", "data-turbo-track": "reload" %>
-  <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pulltorefreshjs/0.1.16/pulltorefresh.min.js"></script>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
 </head>
 <body class= "bg-gray-800 text-light ">
 <header>
