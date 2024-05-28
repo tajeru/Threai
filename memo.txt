@@ -697,4 +697,18 @@
   heroku
 
   /app/vendor/bundle/ruby/3.3.0/gems/zeitwerk-2.6.15/lib/zeitwerk/loader/helpers.
+
+
+    # @raise [NameError]
+  # @sig (Module, Symbol) -> Object
+  #private def cget(parent, cname)
+   # parent.const_get(cname, false)
+ # end
+
+   # @raise [NameError]
+  # @sig (Module, Symbol) -> Object
+  private def crem(parent, cname)
+    parent.__send__(:remove_const, cname)
+  end
+
   
