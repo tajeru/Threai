@@ -696,4 +696,5 @@
 
   heroku
 
-  /app/vendor/bundle/ruby/3.3.0/gems/zeitwerk-2.6.15/lib/zeitwerk/loader/helpers
+  /app/vendor/bundle/ruby/3.3.0/gems/zeitwerk-2.6.15/lib/zeitwerk/loader/helpers.rb .
+  
