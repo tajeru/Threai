@@ -144,9 +144,19 @@ module Zeitwerk::Loader::Helpers
 
   # @raise [NameError]
   # @sig (Module, Symbol) -> Object
-  private def cget(parent, cname)
+  #private def cget(parent, cname)
+   # parent.const_get(cname, false)
+ # end
+
+  # @raise [NameError]
+# @sig (Module, Symbol) -> Object
+private def cget(parent, cname)
+  begin
     parent.const_get(cname, false)
+  rescue NameError
+    puts "NameError: uninitialized constant #{parent}::#{cname}"
   end
+end
 
   # @raise [NameError]
   # @sig (Module, Symbol) -> Object
