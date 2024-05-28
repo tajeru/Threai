@@ -1,0 +1,18 @@
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/tajeru/.rbenv/versions/3.3.1/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-dqdngu sitelibdir\=./.gem.20240528-78802-dqdngu clean
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-dqdngu sitelibdir\=./.gem.20240528-78802-dqdngu
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-dqdngu sitelibdir\=./.gem.20240528-78802-dqdngu install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20240528-78802-dqdngu/skiptrace/internal
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-dqdngu sitelibdir\=./.gem.20240528-78802-dqdngu clean

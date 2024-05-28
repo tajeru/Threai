@@ -1,0 +1,20 @@
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/strscan-3.1.0/ext/strscan
+/Users/tajeru/.rbenv/versions/3.3.1/bin/ruby extconf.rb
+checking for onig_region_memsize() in ruby.h... yes
+checking for rb_reg_onig_match() in ruby.h... yes
+creating Makefile
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-i5i21s sitelibdir\=./.gem.20240528-78802-i5i21s clean
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-i5i21s sitelibdir\=./.gem.20240528-78802-i5i21s
+compiling strscan.c
+linking shared-object strscan.bundle
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-i5i21s sitelibdir\=./.gem.20240528-78802-i5i21s install
+/usr/bin/install -c -m 0755 strscan.bundle ./.gem.20240528-78802-i5i21s
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-i5i21s sitelibdir\=./.gem.20240528-78802-i5i21s clean
