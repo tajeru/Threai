@@ -611,7 +611,7 @@
     @api_key = api_key
   end
 
-  ChatGPTClient.configure do |config|
+  ChatGptClient.configure do |config|
     config.api_key = ENV['CHAT_GPT_API_KEY']
   end
 
@@ -666,7 +666,7 @@
   if @content != nil
     if @post.save
       api_key = ENV['CHAT_GPT_API_KEY']
-      client = ChatGPTClient.new(api_key)
+      client = ChatGptClient.new(api_key)
       @question = params[:content] + "また300文字以内に要約してください。"
       puts @question
       @answer = client.ask_question(@question)

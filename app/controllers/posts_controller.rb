@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   if @content != nil
     if @post.save
       api_key = ENV['CHAT_GPT_API_KEY']
-      client = ChatGPTClient.new(api_key)
+      client = ChatGptClient.new(api_key)
       @question = params[:content] + "また300文字以内に要約してください。"
       puts @question
       @answer = client.ask_question(@question)
