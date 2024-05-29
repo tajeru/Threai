@@ -1,0 +1,19 @@
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+/Users/tajeru/.rbenv/versions/3.3.1/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-au803e sitelibdir\=./.gem.20240528-78802-au803e clean
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-au803e sitelibdir\=./.gem.20240528-78802-au803e
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-au803e sitelibdir\=./.gem.20240528-78802-au803e install
+/usr/bin/install -c -m 0755 debug.bundle ./.gem.20240528-78802-au803e/debug
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-au803e sitelibdir\=./.gem.20240528-78802-au803e clean

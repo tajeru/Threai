@@ -1,6 +1,6 @@
 require 'httparty'
 
-class ChatGPTClient
+class ChatGptClient
   include HTTParty
   base_uri 'https://api.openai.com/v1/'
 

@@ -1,0 +1,18 @@
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/racc-1.8.0/ext/racc/cparse
+/Users/tajeru/.rbenv/versions/3.3.1/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-53rhcx sitelibdir\=./.gem.20240528-78802-53rhcx clean
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-53rhcx sitelibdir\=./.gem.20240528-78802-53rhcx
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-53rhcx sitelibdir\=./.gem.20240528-78802-53rhcx install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20240528-78802-53rhcx/racc
+
+current directory: /Users/tajeru/trheai_heroku/Threai/vendor/bundle/ruby/3.3.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240528-78802-53rhcx sitelibdir\=./.gem.20240528-78802-53rhcx clean
