@@ -101,3 +101,19 @@
     });
   });
 </script>
+
+<script>
+  // ページを離れる前にスクロール位置を保存
+  window.addEventListener('beforeunload', function() {
+    localStorage.setItem('scrollPosition', window.scrollY);
+  });
+
+  // ページがロードされたときにスクロール位置を復元
+  window.addEventListener('load', function() {
+    const scrollPosition = localStorage.getItem('scrollPosition');
+    if (scrollPosition) {
+      window.scrollTo(0, scrollPosition);
+      localStorage.removeItem('scrollPosition'); // 位置を一度だけ使用する場合は削除
+    }
+  });
+</script>
