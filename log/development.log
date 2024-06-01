@@ -37603,3 +37603,128 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 21ms (Views: 17.6ms | ActiveRecord: 0.7ms | Allocations: 11245)
 
 
+Started GET "/posts/index" for ::1 at 2024-06-01 18:19:49 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (0.4ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" IN (?, ?, ?, ?, ?, ?)[0m  [["post_id", 29], ["post_id", 28], ["post_id", 27], ["post_id", 26], ["post_id", 25], ["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 17.7ms | Allocations: 14474)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/application.html.erb (Duration: 471.8ms | Allocations: 43745)
+Completed 200 OK in 492ms (Views: 473.4ms | ActiveRecord: 8.4ms | Allocations: 51000)
+
+
+Started GET "/posts/index" for ::1 at 2024-06-01 18:26:08 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (0.2ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" IN (?, ?, ?, ?, ?, ?)[0m  [["post_id", 29], ["post_id", 28], ["post_id", 27], ["post_id", 26], ["post_id", 25], ["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 87.8ms | Allocations: 14476)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/application.html.erb (Duration: 560.4ms | Allocations: 43755)
+Completed 200 OK in 598ms (Views: 562.1ms | ActiveRecord: 10.8ms | Allocations: 51022)
+
+
+Started GET "/posts/index" for ::1 at 2024-06-01 18:26:27 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (0.1ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" IN (?, ?, ?, ?, ?, ?)[0m  [["post_id", 29], ["post_id", 28], ["post_id", 27], ["post_id", 26], ["post_id", 25], ["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 14955)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 41719)
+Completed 200 OK in 30ms (Views: 20.5ms | ActiveRecord: 3.4ms | Allocations: 49675)
+
+
+Started GET "/posts/index" for ::1 at 2024-06-01 18:27:55 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (0.1ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" IN (?, ?, ?, ?, ?, ?)[0m  [["post_id", 29], ["post_id", 28], ["post_id", 27], ["post_id", 26], ["post_id", 25], ["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 14957)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 41749)
+Completed 200 OK in 83ms (Views: 32.6ms | ActiveRecord: 69.1ms | Allocations: 49609)
+
+
+Started GET "/posts/index" for ::1 at 2024-06-01 18:29:43 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (0.1ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" IN (?, ?, ?, ?, ?, ?)[0m  [["post_id", 29], ["post_id", 28], ["post_id", 27], ["post_id", 26], ["post_id", 25], ["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 14955)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/application.html.erb (Duration: 502.8ms | Allocations: 44257)
+Completed 200 OK in 515ms (Views: 503.3ms | ActiveRecord: 2.4ms | Allocations: 52136)
+
+

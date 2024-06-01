@@ -34,8 +34,8 @@
           <div class="card-footer d-none">
             <% post.replies.each do |reply| %>
               <div class="mb-2">
-                <div class="d-flex align-items-top">
-                  <small class="me-2">@<%= reply.user.name %></small>
+                <div class="d-flex align-items-top flex_direction_colum ">
+                  <small class="me-2 replay_user ">@<%= reply.user.name %></small>
                   <p class="mb-0"><%= reply.content %></p>
                 </div>
               </div>

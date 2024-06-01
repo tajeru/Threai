@@ -19,6 +19,20 @@
   color:#7289da;
 }
 
+.mg_btn {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mg_btn_l{
+  margin-left: 1rem;
+}
+
+.mg_btn_r{
+margin-right: 1rem;
+
+}
+
 
 
 .btn_bg_blue:hover{
@@ -48,6 +62,16 @@
   justify-content: center;
 }
 
+.flex_direction_colum{
+flex-direction: column;
+}
+
+.replay_user{
+  color: var(--bs-gray-500);
+  font-size: 0.7rem;
+}
+
+/*top*/
 .modal-backdrop2 {
   --bs-backdrop-zindex: 1050;
   --bs-backdrop-bg: var(--color-blue);
@@ -110,7 +134,7 @@
   width: 1.5rem;
   height: 100vh;
 }
-
+/*入力フォーム*/
 .bi {
   vertical-align: -.125em;
   fill: currentColor;
@@ -190,20 +214,6 @@
 .btn-light:focus {
   color: #333;
   text-shadow: none;
-}
-
-.mg_btn {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.mg_btn_l{
-  margin-left: 1rem;
-}
-
-.mg_btn_r{
-margin-right: 1rem;
-
 }
 
 .send-button:hover .bi-send {
