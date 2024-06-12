@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'revelum/index' => 'revelum#index'
   get 'about/top'
   get "/" => 'home#top'
 
@@ -19,4 +20,6 @@ Rails.application.routes.draw do
   post "question/ask" => "question#ask"
 
   get "about/top" => "about#top"
+
+
 end
