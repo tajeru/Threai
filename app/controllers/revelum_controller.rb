@@ -4,4 +4,5 @@ class RevelumController < ApplicationController
 
   def index
   end
+  
 end

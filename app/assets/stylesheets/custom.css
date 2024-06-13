@@ -11,6 +11,15 @@
    background-color: #23272a;
 }
 
+.btn_bg_black{
+  background-color:#363636;
+}
+
+.btn_bg_black:hover{
+  background-color:#23272a;
+}
+
+
 .btn_bg_blue{
   background-color:#7289da;
 }
@@ -775,4 +784,9 @@ display: block;
 
 #carousel-container {
     position: relative; /* これにより、矢印ボタンの親要素に対してposition:absoluteが機能します */
+}
+
+.btn-flex-center{
+  align-items: center;
+  flex-direction: column;
 }

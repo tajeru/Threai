@@ -39980,3 +39980,2286 @@ Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 12:06:44 +0900
   
 ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
   
+Started GET "/revelum/index" for ::1 at 2024-06-13 12:29:31 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 8.1ms | Allocations: 7492)
+  Rendered layout layouts/revelum.html.erb (Duration: 8.1ms | Allocations: 7580)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 7.9ms | Allocations: 13435)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `contact_path' for an instance of #<Class:0x00000001276dd350>):
+    237:     </div>
+    238:     <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+    239:       <div class="col-lg-6">
+    240:         <%= form_with url: contact_path, method: :post, local: true do |form| %>
+    241:           <div class="form-floating mb-3">
+    242:             <%= form.text_field :name, class: 'form-control', placeholder: 'Enter your name...' %>
+    243:             <label for="name">お名前</label>
+  
+app/views/revelum/index.html.erb:240
+Started GET "/revelum/index" for ::1 at 2024-06-13 12:31:17 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 10.5ms | Allocations: 7440)
+  Rendered layout layouts/revelum.html.erb (Duration: 10.7ms | Allocations: 7528)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.0ms | Allocations: 13786)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `create' for an instance of #<Class:0x000000012719d520>):
+    237:     </div>
+    238:     <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+    239:       <div class="col-lg-6">
+    240:         <%= form_with url: create, method: :post, local: true do |form| %>
+    241:           <div class="form-floating mb-3">
+    242:             <%= form.text_field :name, class: 'form-control', placeholder: 'Enter your name...' %>
+    243:             <label for="name">お名前</label>
+  
+app/views/revelum/index.html.erb:240
+Started GET "/revelum/index" for ::1 at 2024-06-13 12:32:02 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 12.4ms | Allocations: 7441)
+  Rendered layout layouts/revelum.html.erb (Duration: 12.7ms | Allocations: 7529)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.2ms | Allocations: 13785)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `revelum' for an instance of #<Class:0x0000000127172c80>):
+    237:     </div>
+    238:     <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+    239:       <div class="col-lg-6">
+    240:         <%= form_with url: revelum/create, method: :post, local: true do |form| %>
+    241:           <div class="form-floating mb-3">
+    242:             <%= form.text_field :name, class: 'form-control', placeholder: 'Enter your name...' %>
+    243:             <label for="name">お名前</label>
+  
+app/views/revelum/index.html.erb:240
+Started GET "/revelum/" for ::1 at 2024-06-13 12:34:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum"):
+  
+Started GET "/" for ::1 at 2024-06-13 12:34:23 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 855)
+
+
+Started GET "/posts/index" for ::1 at 2024-06-13 12:34:23 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (0.1ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" IN (?, ?)[0m  [["post_id", 25], ["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 24.7ms | Allocations: 19491)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 46503)
+Completed 200 OK in 49ms (Views: 42.3ms | ActiveRecord: 1.1ms | Allocations: 49550)
+
+
+Started GET "/about/top" for ::1 at 2024-06-13 12:34:25 +0900
+Processing by AboutController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering about/top.html.erb within layouts/application
+  Rendered about/top.html.erb within layouts/application (Duration: 0.6ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 5931)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 6892)
+
+
+Started GET "/revelum/index" for ::1 at 2024-06-13 12:34:27 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 15.1ms | Allocations: 6713)
+  Rendered layout layouts/revelum.html.erb (Duration: 15.3ms | Allocations: 6800)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.1ms | Allocations: 7543)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `revelum' for an instance of #<Class:0x0000000127172c80>):
+    237:     </div>
+    238:     <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+    239:       <div class="col-lg-6">
+    240:         <%= form_with url: revelum/create, method: :post, local: true do |form| %>
+    241:           <div class="form-floating mb-3">
+    242:             <%= form.text_field :name, class: 'form-control', placeholder: 'Enter your name...' %>
+    243:             <label for="name">お名前</label>
+  
+app/views/revelum/index.html.erb:240
+Started GET "/revelum/index" for ::1 at 2024-06-13 12:35:46 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 26.7ms | Allocations: 1712)
+  Rendered layout layouts/revelum.html.erb (Duration: 26.8ms | Allocations: 1807)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 2.0ms | Allocations: 8091)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!-- Masthead Home-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100 d-md-flex al-item-center">
+                <div class="col-lg-8 align-self-end container_img_logo">
+                    <div><%= image_tag 'revelum/NaughtvollRevelum_white.png', class: 'img' %></div>
+                   
+                </div>
+            </div>
+        </header>
+    <!-- About -->
+        <section class= " page-section2 main-bg-color " id="about">
+          <div class="container ">
+
+              <div class ="float_left container_img ">
+              <div><%= image_tag 'revelum/super-maxy75.JPEG', class: 'img img_contain' %></div>
+              </div>
+
+              <div class ="container_sen float_left">
+                <h2 class="History_title  text-black">About</h2>
+                <hr class="divider2 orange-color" />
+                <h4 class="History_sen text-center text-black mb-5">ポートフォリオへようこそ</h4>
+                <p class="History_sen text-center text-black mb-5">このウェブサイトは、私の自己紹介と創作活動を通じて、デザインと技術の融合スキルを展示するために設計されました。 
+                                                                    学生時代から多岐にわたる分野に情熱を注ぎ、その経験と学びがこのサイトに集約されています。ここに展示されている各プロジェクトは、
+                                                                    クリエイティブなアイデアを具体的な形に落とし込むプロセスを経て、 当時の信条や感情を素直に表現することを目指して制作されました。
+                                                                    また、このウェブサイト自体も私の技術力を示す作品であり、レイアウトや色使いには特にこだわりを持って取り組んでいます。 
+                                                                    各プロジェクトの背後にあるストーリーやデザインに込めた思いを、ぜひご覧ください。</p>
+                <p class="History_sen text-right text-black mb-5">亀井 壮</p>
+              </div>
+
+            </div>
+
+        </section>
+
+         <!-- Brand -->
+         <section class= " page-section2 sub-bg-color " id="brand">
+            <div class="container">
+  
+                <div class ="float_right container_img d-lg-flex overflow-hidden">
+                    <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/logo2.png', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+                </div>
+  
+                <div class ="container_sen float_left">
+                  <h2 class="History_title  text-white">Brand</h2> <!--text-center-->
+                  <hr class="divider2 red-color" />
+                  <p class=" text-center text-white-75 mb-5 lh-lg">ナートヴォル・レブロムは、2023年11月24日にフィリピンでの短期留学中、私の恩師であるMr. Zeusからのインスピレーションを受けて誕生したブランドです。
+                    このブランドは「石盤に刻まれた芸術」というコンセプトを掲げています。</p>
+                    <p class= "text-center text-white-75 mb-5 lh-lg">現在、ナートヴォル・レブロムでは定期的な新作販売は行っておらず、創作活動は私の気分によって左右されます。創作の成果が気に入った際にのみ販売を行っています。
+                    これはまさに、私たちの創作物がどれだけ自由であるかを象徴しています
+                    将来的には、このブランドを通じて得た社会勉強や経験を生かし、少しでも利益を出せるよう努力していく所存です。私たちの芸術的な取り組みにご興味をお持ちいただけたら幸いです。</p>
+                </div>
+            </div>
+        </section>
+
+    <section class="page-section2 main-bg-color" id="arithfact">
+
+        <div class="container px-4 px-lg-5">
+        <h2 class="mb-4 text-center">Artifact</h2>
+        <hr class="divider orange-color" />
+
+        <div class="carousel">
+            <button class="carousel-control prev"><</button>
+            <div class="carousel-content">
+
+                <div class="carousel-slide">
+                    <div class="float_right container_img d-lg-flex overflow-hidden">
+                        <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/ring.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+                    </div>
+                    <div class="container_sen float_left">
+                        <h2 class="">Ring</h2>
+                        <hr class="divider2 red-color" />
+                        <p class="text-center mb-5 lh-lg">2023年10月、フィリピン留学中に出会ったZues氏と共に制作したシルバーリング。
+                                                            このリングは、地金を叩いて成形し、カレン族の伝統を思わせる曲線を織り交ぜた幾何学模様の彫金を施しました。
+                                                            その精緻なデザインは、身に着けるたびに私たちを東南アジアの美しい風景へと誘います。</p>
+                    </div>
+                </div>
+
+                 <div class="carousel-slide">
+                    <div class="float_right container_img d-lg-flex overflow-hidden">
+                        <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/ring-stand.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+                    </div>
+                    <div class="container_sen float_left">
+                        <h2 class="">Ring Stand</h2>
+                        <hr class="divider2 red-color" />
+                        <p class="text-center mb-5 lh-lg">2023年の夏、他の作品を制作する合間に息抜きとして作ったリングスタンド。
+                                                        無駄のない機能美と圧倒的なバランスが特徴で、どこか懐かしい地球儀のメモリクリップを思わせるデザインが魅力です。
+                                                          このリングスタンドは、シンプルでありながらも洗練された美しさを放ちます。</p>
+                        
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="float_right container_img d-lg-flex overflow-hidden">
+                        <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/pencase.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+                    </div>
+                    <div class="container_sen float_left">
+                        <h2 class="">Leather Pencase</h2>
+                        <hr class="divider2 red-color" />
+                        <p class="text-center mb-5 lh-lg">2018年頃に制作したロールペンケース。柔らかく、ずっと握っていたくなるような革で作られており、使うたびに手に馴染んでいきます。
+                                                            長い時間を共に過ごし、成長してきたかけがえのない友のような存在。この革の兄弟たちは今も元気にしているだろうか。</p>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div  id="carousel-container" class="float_right container_img d-lg-flex overflow-hidden">
+                        <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/bag.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+                    </div>
+                    <div class="container_sen float_left">
+                        <h2 class="">Leather Bag</h2>
+                        <hr class="divider2 red-color" />
+                        <p class="text-center mb-5 lh-lg">2024年3月頃に制作したレザーバッグ。フィリピンで購入した大きなベリー革を使用しています。
+                                                            縫い目を見せないことを美とし、ベリー革の端をあえてそのままトップにすることで独特の風合いを生かしました。
+                                                            たくさんの傷や鞣しの際にできた穴は、生きた証拠であり、私が愛してやまない特徴です。このバッグを手にするたびに、内側からフィリピンの温かさを感じることができます。</p>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="float_right container_img d-lg-flex overflow-hidden">
+                        <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/bike.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+                    </div>
+                    <div class="container_sen float_left">
+                        <h2 class="">Piste Bike</h2>
+                        <hr class="divider2 red-color" />
+                        <p class="text-center mb-5 lh-lg">2018年に組み立てたピストバイク。メインフレームには2006年製のMasiを使用し、クランクには1980年代のスギノ・スーパーマキシーを採用しました。
+                                                            さらに、滅多に見ない編み上げ式のグリップで仕上げ、クラシカルで温かみのあるバイクに仕上がっています。この一台は、過去と現在が調和した、美しさと機能を兼ね備えた逸品です。</p>
+                      
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="float_right container_img d-lg-flex overflow-hidden">
+                        <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/tie.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+                    </div>
+                    <div class="container_sen float_left">
+                        <h2 class="">Custom denim </h2>
+                        <hr class="divider2 red-color" />
+                        <p class="text-center mb-5 lh-lg">2022年に作成したカスタムデニム。この作品は、タイトなデニムをフレアに変えたいという思いと、従兄弟の父から譲り受けた40年前のKENZOのネクタイを蘇らせたいという願いから生まれました。
+                                                            左右のデザインには、KENZOの過去と現在を表現し、シンプルでカジュアル服装の中にフォーマルを織り交ぜることが出来きます。</p>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="float_right container_img d-lg-flex overflow-hidden">
+                        <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/knit43.PNG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+                    </div>
+                    <div class="container_sen float_left">
+                        <h2 class="">Granny Square</h2>
+                        <hr class="divider2 red-color" />
+                        <p class="text-center mb-5 lh-lg">2024年1月頃に作成したグラニースクエアのマフラー。細かいパッチを繋げるのが主流の中、10号のかぎ針を使って大きくインパクトのある作品に仕上げました。
+                                                            グラニーとは祖母を意味するグランマから来ており、親しみや懐かしさを感じさせます。このマフラーはオールブラックのスタイルに大胆なグラニースクエアを合わせることで、
+                                                            過去から現代へと昇華した一品です。</p>
+                    </div>
+                </div>
+
+                
+                <div class="carousel-slide">
+                    <div class="float_right container_img d-lg-flex overflow-hidden">
+                        <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/turu-iem.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+                    </div>
+                    <div class="container_sen float_left">
+                        <h2 class="">Ear Headphone</h2>
+                        <hr class="divider2 red-color" />
+                        <p class="text-center mb-5 lh-lg">2021年5月に制作したカスタムIEM。これは3作目にあたるもので、Lowが2基、Midが2基の計4基を搭載した2wayシステムを採用しています。
+                                                        美しいフェイスプレートは、3層にわたる精巧なデザインで仕上げられ、細部にまでこだわり抜いた歯車と鶴の配置が永遠の時を象徴しています。
+                                                        この優雅で洗練されたデザインと高度な技術が融合したカスタムIEMは、視覚と聴覚の両方で極上の体験を提供します。</p>
+                        
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="float_right container_img d-lg-flex overflow-hidden">
+                        <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/7oKa-iem.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+                    </div>
+                    <div class="container_sen float_left">
+                        <h2 class="">Ear Headphone2</h2>
+                        <hr class="divider2 red-color" />
+                        <p class="text-center mb-5 lh-lg">2023年8月に完成したカスタムIEM（インイヤーモニター）は、4作目にして初めてネットワーク構築に挑戦し、Lowが2基、Midが2基、
+                                                        Highが4基の合計8基のドライバーを搭載した3wayシステムを採用しています。各パーツを丹念に組み替え、録音を繰り返し、最後の一瞬までこだわり抜いた至高の作品です。</p>
+                        <p class="text-center mb-5 lh-lg">内側の技術だけでなく、外側の美しさにも一切の妥協はありません。シェルは透き通るような輝きを放ち、フェイスプレートにはエレガントな青貝を使用。
+                                                            さらに、補聴器にも使われる抗菌コーティング剤を塗布し、衛生面にも配慮しました。これこそが、究極の技術と美の融合を追求したオーディオマスターピースです。</p>
+                    </div>
+                </div>
+                
+            </div>
+            <button class="carousel-control next">></button>
+        </div>
+    </div>
+</section>
+
+            
+
+        <!--Origin-->
+         <section  class="page-section sub-bg-color" id="" >
+                <div class="container_his Color">
+                    <div class="container_his1 text-center text-white">
+                        <h2 class="History_title text-center ">Naughtvoll Revelum</h2>
+                        <hr class="divider red-color"/>
+                        <h3 class="text-center mt-5 mb-5">-仮-</h3>
+                        <h5 class="container text-center text-white-75 mb-5 lh-lg">作成中</h5>
+                        <h3 class="text-center mt-5 mb-5">-Origin-</h3>
+                        <h5 class="container text-center text-white-75 mb-5 lh-lg">"Naughtvoll Revelum"は、創造性と物事の始まりを示す名前です。"Naughtvoll"は古英語の"Naught"（何も無い）と"Voll"（満たされた、完全）を組み合わせ、
+                            ｢無から完全な、可能性に満ちた世界」を表現しています。一方で"Revelum"は"Reveal”（明らかにする。初公開する）に由来し「Re」(もう一度)とラテン語の「velum」(帆、布、ベール)を繋げた造語で、｢布を土台とし新たな物を創造し露わにしていく｣という意味を持ちます。
+                            この名前は、無から有を生み出す過程や創造的な旅の夜明けを象徴しています。Naughtvoll Revelumは無から有を生み出すことを指針とし、｢はじまりのない創造｣を使命としています。名前の由来や信念に基づいて、石盤に刻まれた芸術を皆様に提供する事を誓います。 </h5>
+                        <h3 class="text-center mt-5 mb-5">-はじまりのない創造-</h3>
+                        <h5 class="container text-center text-white-75 mb-5 lh-lg">「はじまりのない創造」という概念は、あらゆる創造物やアイデアが新たなものであるという考え方です。創造的なプロセスは、過去の概念やアイデアを基にすることがありますが、新しいものを生み出す過程は常に新規性や革新性を持ちます。
+                            「はじまりのない創造」は、革新的なものや新しいアイデアが常に新たな出発点から始まり、過去の基盤を持たずに生まれることを意味します。これは、既存の概念や規範にとらわれず、創造性を自由に発揮することを指すことがあります。新しい考えやアプローチが、過去の枠組みを超えて、
+                            全く新しい次元で革新をもたらすことができるという意味も含まれることがあります。
+                            
+                            「はじまりのない創造」という概念は、新しいものを生み出すプロセスにおいて、創造物やアイデアが従来の規範や枠組みにとらわれず、新たなスタートを切ることを意味します。つまり、過去の制約や既存の概念から自由に発想し、新しいものを生み出すことを追求することです。
+                            その際、あなたや他の人々が新たな創造の源泉となり、革新的なアイデアやプロジェクトを生み出すことが「はじまりのない創造」の一部として捉えられます。</h5>
+                    </div>
+                </div>
+        </section>
+
+        <!-- About me -->
+        <section class="page-section2 main-bg-color text-black" id="">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mb-4">わたしについて</h2>
+                <hr class="divider red-color"  />
+                <div class ="float_right container_img p-xxl-3 ">
+                    <div><%= image_tag 'revelum/mahura-810.JPEG', class: 'img_Takeru px-4 ' %></div>
+                 </div>
+                <div class="staff_container border_line Line_2n">
+                    <h2>name</h2>
+                    <p>お酒は弱いがお酒が大好きなオーナーバーテンダー18歳からBARでアルバイトを始め、26歳から本格的にバーテンダーの道へキャリア12年目【ディアジオワールドクラス日本大会2015,2016,2017&2018】TOP50バーテンダー選出【ボルスアラウンドザワールド2017】アジアTOP10バーテンダー選出</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section sub-bg-color" id="contact">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-lg-8 col-xl-6 text-center text-white-75">
+        <h2 class="mt-0">お問い合わせ</h2>
+        <hr class="divider" />
+        <p class="mb-5">来店のご予約につきましてはお電話でのみ承っております。下記フォームでは来店予約は受け付けておりませんのでご了承下さい。</p>
+      </div>
+    </div>
+    <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+      <div class="col-lg-6">
+        <%= form_with url: /revelum/create, method: :post, local: true do |form| %>
+          <div class="form-floating mb-3">
+            <%= form.text_field :name, class: 'form-control', placeholder: 'Enter your name...' %>
+            <label for="name">お名前</label>
+            <div class="invalid-feedback">必須項目です。</div>
+          </div>
+          <div class="form-floating mb-3">
+            <%= form.email_field :email, class: 'form-control', placeholder: 'name@example.com' %>
+            <label for="email">メールアドレス</label>
+            <div class="invalid-feedback">必須項目です。</div>
+            <div class="invalid-feedback">無効なメールアドレスです。</div>
+          </div>
+          <div class="form-floating mb-3">
+            <%= form.telephone_field :phone, class: 'form-control', placeholder: '(123) 456-7890' %>
+            <label for="phone">電話番号</label>
+            <div class="invalid-feedback">必須項目です。</div>
+          </div>
+          <div class="form-floating mb-3">
+            <%= form.text_area :message, class: 'form-control', placeholder: 'Enter your message here...', style: 'height: 10rem' %>
+            <label for="message">お問い合わせ内容</label>
+            <div class="invalid-feedback">必須項目です。</div>
+          </div>
+          <div class="d-grid text-white">
+            <%= form.submit '確認', class: 'btn btn-sub btn-xl' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-lg-4 text-center mb-5 mb-lg-0">
+        <i class="bi-phone fs-2 mb-3 text-muted"></i>
+        <div>042-512-9959</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+       
+        <!-- Contact -->
+        <section class="page-section sub-bg-color" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center text-white-75">
+                        <h2 class="mt-0 ">お問い合わせ</h2>
+                        <hr class="divider " />
+                        <p class=" mb-5">来店のご予約につきましてはお電話でのみ承っております。下記フォームでは来店予約は受け付けておりませんのでご了承下さい。</p>
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                    <div class="col-lg-6">
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">お名前</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">必須項目です。</div>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">メールアドレス</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">必須項目です。</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">無効なメールアドレスです。</div>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">電話番号</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">必須項目です。</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">お問い合わせ内容</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">必須項目です。</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">送信しました。</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3"></div>メッセージの送信に失敗しました</div>
+                            <!-- Submit Button-->
+                            <div class="d-grid text-white"><button class="btn btn-sub btn-xl disabled " id="submitButton" type="submit">確認</button></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
+                        <div>042-512-9959</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2022 - Company Name</div></div>
+        </footer>
+):
+1:    <!-- Masthead Home-->
+2:            <header class="masthead">
+3:                <div class="container px-4 px-lg-5 h-100 d-md-flex al-item-center">
+4:                    <div class="col-lg-8 align-self-end container_img_logo">
+5:                        <div><%= image_tag 'revelum/NaughtvollRevelum_white.png', class: 'img' %></div>
+6:                       
+7:                    </div>
+8:                </div>
+9:            </header>
+10:        <!-- About -->
+11:            <section class= " page-section2 main-bg-color " id="about">
+12:              <div class="container ">
+13:    
+14:                  <div class ="float_left container_img ">
+15:                  <div><%= image_tag 'revelum/super-maxy75.JPEG', class: 'img img_contain' %></div>
+16:                  </div>
+17:    
+18:                  <div class ="container_sen float_left">
+19:                    <h2 class="History_title  text-black">About</h2>
+20:                    <hr class="divider2 orange-color" />
+21:                    <h4 class="History_sen text-center text-black mb-5">ポートフォリオへようこそ</h4>
+22:                    <p class="History_sen text-center text-black mb-5">このウェブサイトは、私の自己紹介と創作活動を通じて、デザインと技術の融合スキルを展示するために設計されました。 
+23:                                                                        学生時代から多岐にわたる分野に情熱を注ぎ、その経験と学びがこのサイトに集約されています。ここに展示されている各プロジェクトは、
+24:                                                                        クリエイティブなアイデアを具体的な形に落とし込むプロセスを経て、 当時の信条や感情を素直に表現することを目指して制作されました。
+25:                                                                        また、このウェブサイト自体も私の技術力を示す作品であり、レイアウトや色使いには特にこだわりを持って取り組んでいます。 
+26:                                                                        各プロジェクトの背後にあるストーリーやデザインに込めた思いを、ぜひご覧ください。</p>
+27:                    <p class="History_sen text-right text-black mb-5">亀井 壮</p>
+28:                  </div>
+29:    
+30:                </div>
+31:    
+32:            </section>
+33:    
+34:             <!-- Brand -->
+35:             <section class= " page-section2 sub-bg-color " id="brand">
+36:                <div class="container">
+37:      
+38:                    <div class ="float_right container_img d-lg-flex overflow-hidden">
+39:                        <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/logo2.png', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+40:                    </div>
+41:      
+42:                    <div class ="container_sen float_left">
+43:                      <h2 class="History_title  text-white">Brand</h2> <!--text-center-->
+44:                      <hr class="divider2 red-color" />
+45:                      <p class=" text-center text-white-75 mb-5 lh-lg">ナートヴォル・レブロムは、2023年11月24日にフィリピンでの短期留学中、私の恩師であるMr. Zeusからのインスピレーションを受けて誕生したブランドです。
+46:                        このブランドは「石盤に刻まれた芸術」というコンセプトを掲げています。</p>
+47:                        <p class= "text-center text-white-75 mb-5 lh-lg">現在、ナートヴォル・レブロムでは定期的な新作販売は行っておらず、創作活動は私の気分によって左右されます。創作の成果が気に入った際にのみ販売を行っています。
+48:                        これはまさに、私たちの創作物がどれだけ自由であるかを象徴しています
+49:                        将来的には、このブランドを通じて得た社会勉強や経験を生かし、少しでも利益を出せるよう努力していく所存です。私たちの芸術的な取り組みにご興味をお持ちいただけたら幸いです。</p>
+50:                    </div>
+51:                </div>
+52:            </section>
+53:    
+54:        <section class="page-section2 main-bg-color" id="arithfact">
+55:    
+56:            <div class="container px-4 px-lg-5">
+57:            <h2 class="mb-4 text-center">Artifact</h2>
+58:            <hr class="divider orange-color" />
+59:    
+60:            <div class="carousel">
+61:                <button class="carousel-control prev"><</button>
+62:                <div class="carousel-content">
+63:    
+64:                    <div class="carousel-slide">
+65:                        <div class="float_right container_img d-lg-flex overflow-hidden">
+66:                            <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/ring.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+67:                        </div>
+68:                        <div class="container_sen float_left">
+69:                            <h2 class="">Ring</h2>
+70:                            <hr class="divider2 red-color" />
+71:                            <p class="text-center mb-5 lh-lg">2023年10月、フィリピン留学中に出会ったZues氏と共に制作したシルバーリング。
+72:                                                                このリングは、地金を叩いて成形し、カレン族の伝統を思わせる曲線を織り交ぜた幾何学模様の彫金を施しました。
+73:                                                                その精緻なデザインは、身に着けるたびに私たちを東南アジアの美しい風景へと誘います。</p>
+74:                        </div>
+75:                    </div>
+76:    
+77:                     <div class="carousel-slide">
+78:                        <div class="float_right container_img d-lg-flex overflow-hidden">
+79:                            <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/ring-stand.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+80:                        </div>
+81:                        <div class="container_sen float_left">
+82:                            <h2 class="">Ring Stand</h2>
+83:                            <hr class="divider2 red-color" />
+84:                            <p class="text-center mb-5 lh-lg">2023年の夏、他の作品を制作する合間に息抜きとして作ったリングスタンド。
+85:                                                            無駄のない機能美と圧倒的なバランスが特徴で、どこか懐かしい地球儀のメモリクリップを思わせるデザインが魅力です。
+86:                                                              このリングスタンドは、シンプルでありながらも洗練された美しさを放ちます。</p>
+87:                            
+88:                        </div>
+89:                    </div>
+90:    
+91:                    <div class="carousel-slide">
+92:                        <div class="float_right container_img d-lg-flex overflow-hidden">
+93:                            <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/pencase.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+94:                        </div>
+95:                        <div class="container_sen float_left">
+96:                            <h2 class="">Leather Pencase</h2>
+97:                            <hr class="divider2 red-color" />
+98:                            <p class="text-center mb-5 lh-lg">2018年頃に制作したロールペンケース。柔らかく、ずっと握っていたくなるような革で作られており、使うたびに手に馴染んでいきます。
+99:                                                                長い時間を共に過ごし、成長してきたかけがえのない友のような存在。この革の兄弟たちは今も元気にしているだろうか。</p>
+100:                        </div>
+101:                    </div>
+102:    
+103:                    <div class="carousel-slide">
+104:                        <div  id="carousel-container" class="float_right container_img d-lg-flex overflow-hidden">
+105:                            <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/bag.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+106:                        </div>
+107:                        <div class="container_sen float_left">
+108:                            <h2 class="">Leather Bag</h2>
+109:                            <hr class="divider2 red-color" />
+110:                            <p class="text-center mb-5 lh-lg">2024年3月頃に制作したレザーバッグ。フィリピンで購入した大きなベリー革を使用しています。
+111:                                                                縫い目を見せないことを美とし、ベリー革の端をあえてそのままトップにすることで独特の風合いを生かしました。
+112:                                                                たくさんの傷や鞣しの際にできた穴は、生きた証拠であり、私が愛してやまない特徴です。このバッグを手にするたびに、内側からフィリピンの温かさを感じることができます。</p>
+113:                        </div>
+114:                    </div>
+115:    
+116:                    <div class="carousel-slide">
+117:                        <div class="float_right container_img d-lg-flex overflow-hidden">
+118:                            <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/bike.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+119:                        </div>
+120:                        <div class="container_sen float_left">
+121:                            <h2 class="">Piste Bike</h2>
+122:                            <hr class="divider2 red-color" />
+123:                            <p class="text-center mb-5 lh-lg">2018年に組み立てたピストバイク。メインフレームには2006年製のMasiを使用し、クランクには1980年代のスギノ・スーパーマキシーを採用しました。
+124:                                                                さらに、滅多に見ない編み上げ式のグリップで仕上げ、クラシカルで温かみのあるバイクに仕上がっています。この一台は、過去と現在が調和した、美しさと機能を兼ね備えた逸品です。</p>
+125:                          
+126:                        </div>
+127:                    </div>
+128:    
+129:                    <div class="carousel-slide">
+130:                        <div class="float_right container_img d-lg-flex overflow-hidden">
+131:                            <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/tie.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+132:                        </div>
+133:                        <div class="container_sen float_left">
+134:                            <h2 class="">Custom denim </h2>
+135:                            <hr class="divider2 red-color" />
+136:                            <p class="text-center mb-5 lh-lg">2022年に作成したカスタムデニム。この作品は、タイトなデニムをフレアに変えたいという思いと、従兄弟の父から譲り受けた40年前のKENZOのネクタイを蘇らせたいという願いから生まれました。
+137:                                                                左右のデザインには、KENZOの過去と現在を表現し、シンプルでカジュアル服装の中にフォーマルを織り交ぜることが出来きます。</p>
+138:                        </div>
+139:                    </div>
+140:    
+141:                    <div class="carousel-slide">
+142:                        <div class="float_right container_img d-lg-flex overflow-hidden">
+143:                            <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/knit43.PNG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+144:                        </div>
+145:                        <div class="container_sen float_left">
+146:                            <h2 class="">Granny Square</h2>
+147:                            <hr class="divider2 red-color" />
+148:                            <p class="text-center mb-5 lh-lg">2024年1月頃に作成したグラニースクエアのマフラー。細かいパッチを繋げるのが主流の中、10号のかぎ針を使って大きくインパクトのある作品に仕上げました。
+149:                                                                グラニーとは祖母を意味するグランマから来ており、親しみや懐かしさを感じさせます。このマフラーはオールブラックのスタイルに大胆なグラニースクエアを合わせることで、
+150:                                                                過去から現代へと昇華した一品です。</p>
+151:                        </div>
+152:                    </div>
+153:    
+154:                    
+155:                    <div class="carousel-slide">
+156:                        <div class="float_right container_img d-lg-flex overflow-hidden">
+157:                            <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/turu-iem.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+158:                        </div>
+159:                        <div class="container_sen float_left">
+160:                            <h2 class="">Ear Headphone</h2>
+161:                            <hr class="divider2 red-color" />
+162:                            <p class="text-center mb-5 lh-lg">2021年5月に制作したカスタムIEM。これは3作目にあたるもので、Lowが2基、Midが2基の計4基を搭載した2wayシステムを採用しています。
+163:                                                            美しいフェイスプレートは、3層にわたる精巧なデザインで仕上げられ、細部にまでこだわり抜いた歯車と鶴の配置が永遠の時を象徴しています。
+164:                                                            この優雅で洗練されたデザインと高度な技術が融合したカスタムIEMは、視覚と聴覚の両方で極上の体験を提供します。</p>
+165:                            
+166:                        </div>
+167:                    </div>
+168:    
+169:                    <div class="carousel-slide">
+170:                        <div class="float_right container_img d-lg-flex overflow-hidden">
+171:                            <div class="my-md-auto mx-md-0"><%= image_tag 'revelum/7oKa-iem.JPEG', class: 'img-fluid my-md-auto mx-md-0 ' %></div>
+172:                        </div>
+173:                        <div class="container_sen float_left">
+174:                            <h2 class="">Ear Headphone2</h2>
+175:                            <hr class="divider2 red-color" />
+176:                            <p class="text-center mb-5 lh-lg">2023年8月に完成したカスタムIEM（インイヤーモニター）は、4作目にして初めてネットワーク構築に挑戦し、Lowが2基、Midが2基、
+177:                                                            Highが4基の合計8基のドライバーを搭載した3wayシステムを採用しています。各パーツを丹念に組み替え、録音を繰り返し、最後の一瞬までこだわり抜いた至高の作品です。</p>
+178:                            <p class="text-center mb-5 lh-lg">内側の技術だけでなく、外側の美しさにも一切の妥協はありません。シェルは透き通るような輝きを放ち、フェイスプレートにはエレガントな青貝を使用。
+179:                                                                さらに、補聴器にも使われる抗菌コーティング剤を塗布し、衛生面にも配慮しました。これこそが、究極の技術と美の融合を追求したオーディオマスターピースです。</p>
+180:                        </div>
+181:                    </div>
+182:                    
+183:                </div>
+184:                <button class="carousel-control next">></button>
+185:            </div>
+186:        </div>
+187:    </section>
+188:    
+189:                
+190:    
+191:            <!--Origin-->
+192:             <section  class="page-section sub-bg-color" id="" >
+193:                    <div class="container_his Color">
+194:                        <div class="container_his1 text-center text-white">
+195:                            <h2 class="History_title text-center ">Naughtvoll Revelum</h2>
+196:                            <hr class="divider red-color"/>
+197:                            <h3 class="text-center mt-5 mb-5">-仮-</h3>
+198:                            <h5 class="container text-center text-white-75 mb-5 lh-lg">作成中</h5>
+199:                            <h3 class="text-center mt-5 mb-5">-Origin-</h3>
+200:                            <h5 class="container text-center text-white-75 mb-5 lh-lg">"Naughtvoll Revelum"は、創造性と物事の始まりを示す名前です。"Naughtvoll"は古英語の"Naught"（何も無い）と"Voll"（満たされた、完全）を組み合わせ、
+201:                                ｢無から完全な、可能性に満ちた世界」を表現しています。一方で"Revelum"は"Reveal”（明らかにする。初公開する）に由来し「Re」(もう一度)とラテン語の「velum」(帆、布、ベール)を繋げた造語で、｢布を土台とし新たな物を創造し露わにしていく｣という意味を持ちます。
+202:                                この名前は、無から有を生み出す過程や創造的な旅の夜明けを象徴しています。Naughtvoll Revelumは無から有を生み出すことを指針とし、｢はじまりのない創造｣を使命としています。名前の由来や信念に基づいて、石盤に刻まれた芸術を皆様に提供する事を誓います。 </h5>
+203:                            <h3 class="text-center mt-5 mb-5">-はじまりのない創造-</h3>
+204:                            <h5 class="container text-center text-white-75 mb-5 lh-lg">「はじまりのない創造」という概念は、あらゆる創造物やアイデアが新たなものであるという考え方です。創造的なプロセスは、過去の概念やアイデアを基にすることがありますが、新しいものを生み出す過程は常に新規性や革新性を持ちます。
+205:                                「はじまりのない創造」は、革新的なものや新しいアイデアが常に新たな出発点から始まり、過去の基盤を持たずに生まれることを意味します。これは、既存の概念や規範にとらわれず、創造性を自由に発揮することを指すことがあります。新しい考えやアプローチが、過去の枠組みを超えて、
+206:                                全く新しい次元で革新をもたらすことができるという意味も含まれることがあります。
+207:                                
+208:                                「はじまりのない創造」という概念は、新しいものを生み出すプロセスにおいて、創造物やアイデアが従来の規範や枠組みにとらわれず、新たなスタートを切ることを意味します。つまり、過去の制約や既存の概念から自由に発想し、新しいものを生み出すことを追求することです。
+209:                                その際、あなたや他の人々が新たな創造の源泉となり、革新的なアイデアやプロジェクトを生み出すことが「はじまりのない創造」の一部として捉えられます。</h5>
+210:                        </div>
+211:                    </div>
+212:            </section>
+213:    
+214:            <!-- About me -->
+215:            <section class="page-section2 main-bg-color text-black" id="">
+216:                <div class="container px-4 px-lg-5 text-center">
+217:                    <h2 class="mb-4">わたしについて</h2>
+218:                    <hr class="divider red-color"  />
+219:                    <div class ="float_right container_img p-xxl-3 ">
+220:                        <div><%= image_tag 'revelum/mahura-810.JPEG', class: 'img_Takeru px-4 ' %></div>
+221:                     </div>
+222:                    <div class="staff_container border_line Line_2n">
+223:                        <h2>name</h2>
+224:                        <p>お酒は弱いがお酒が大好きなオーナーバーテンダー18歳からBARでアルバイトを始め、26歳から本格的にバーテンダーの道へキャリア12年目【ディアジオワールドクラス日本大会2015,2016,2017&2018】TOP50バーテンダー選出【ボルスアラウンドザワールド2017】アジアTOP10バーテンダー選出</p>
+225:                    </div>
+226:                </div>
+227:            </section>
+228:    
+229:            <section class="page-section sub-bg-color" id="contact">
+230:      <div class="container px-4 px-lg-5">
+231:        <div class="row gx-4 gx-lg-5 justify-content-center">
+232:          <div class="col-lg-8 col-xl-6 text-center text-white-75">
+233:            <h2 class="mt-0">お問い合わせ</h2>
+234:            <hr class="divider" />
+235:            <p class="mb-5">来店のご予約につきましてはお電話でのみ承っております。下記フォームでは来店予約は受け付けておりませんのでご了承下さい。</p>
+236:          </div>
+237:        </div>
+238:        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+239:          <div class="col-lg-6">
+240:            <%= form_with url: /revelum/create, method: :post, local: true do |form| %>
+241:              <div class="form-floating mb-3">
+242:                <%= form.text_field :name, class: 'form-control', placeholder: 'Enter your name...' %>
+243:                <label for="name">お名前</label>
+244:                <div class="invalid-feedback">必須項目です。</div>
+245:              </div>
+246:              <div class="form-floating mb-3">
+247:                <%= form.email_field :email, class: 'form-control', placeholder: 'name@example.com' %>
+248:                <label for="email">メールアドレス</label>
+249:                <div class="invalid-feedback">必須項目です。</div>
+250:                <div class="invalid-feedback">無効なメールアドレスです。</div>
+251:              </div>
+252:              <div class="form-floating mb-3">
+253:                <%= form.telephone_field :phone, class: 'form-control', placeholder: '(123) 456-7890' %>
+254:                <label for="phone">電話番号</label>
+255:                <div class="invalid-feedback">必須項目です。</div>
+256:              </div>
+257:              <div class="form-floating mb-3">
+258:                <%= form.text_area :message, class: 'form-control', placeholder: 'Enter your message here...', style: 'height: 10rem' %>
+259:                <label for="message">お問い合わせ内容</label>
+260:                <div class="invalid-feedback">必須項目です。</div>
+261:              </div>
+262:              <div class="d-grid text-white">
+263:                <%= form.submit '確認', class: 'btn btn-sub btn-xl' %>
+264:              </div>
+265:            <% end %>
+266:          </div>
+267:        </div>
+268:        <div class="row gx-4 gx-lg-5 justify-content-center">
+269:          <div class="col-lg-4 text-center mb-5 mb-lg-0">
+270:            <i class="bi-phone fs-2 mb-3 text-muted"></i>
+271:            <div>042-512-9959</div>
+272:          </div>
+273:        </div>
+274:      </div>
+275:    </section>
+276:    
+277:    
+278:    
+279:           
+280:            <!-- Contact -->
+281:            <section class="page-section sub-bg-color" id="contact">
+282:                <div class="container px-4 px-lg-5">
+283:                    <div class="row gx-4 gx-lg-5 justify-content-center">
+284:                        <div class="col-lg-8 col-xl-6 text-center text-white-75">
+285:                            <h2 class="mt-0 ">お問い合わせ</h2>
+286:                            <hr class="divider " />
+287:                            <p class=" mb-5">来店のご予約につきましてはお電話でのみ承っております。下記フォームでは来店予約は受け付けておりませんのでご了承下さい。</p>
+288:                        </div>
+289:                    </div>
+290:                    <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+291:                        <div class="col-lg-6">
+292:                            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+293:                                <!-- Name input-->
+294:                                <div class="form-floating mb-3">
+295:                                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+296:                                    <label for="name">お名前</label>
+297:                                    <div class="invalid-feedback" data-sb-feedback="name:required">必須項目です。</div>
+298:                                </div>
+299:                                <!-- Email address input-->
+300:                                <div class="form-floating mb-3">
+301:                                    <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+302:                                    <label for="email">メールアドレス</label>
+303:                                    <div class="invalid-feedback" data-sb-feedback="email:required">必須項目です。</div>
+304:                                    <div class="invalid-feedback" data-sb-feedback="email:email">無効なメールアドレスです。</div>
+305:                                </div>
+306:                                <!-- Phone number input-->
+307:                                <div class="form-floating mb-3">
+308:                                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+309:                                    <label for="phone">電話番号</label>
+310:                                    <div class="invalid-feedback" data-sb-feedback="phone:required">必須項目です。</div>
+311:                                </div>
+312:                                <!-- Message input-->
+313:                                <div class="form-floating mb-3">
+314:                                    <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+315:                                    <label for="message">お問い合わせ内容</label>
+316:                                    <div class="invalid-feedback" data-sb-feedback="message:required">必須項目です。</div>
+317:                                </div>
+318:                                <!-- Submit success message-->
+319:                                <!---->
+320:                                <!-- This is what your users will see when the form-->
+321:                                <!-- has successfully submitted-->
+322:                                <div class="d-none" id="submitSuccessMessage">
+323:                                    <div class="text-center mb-3">
+324:                                        <div class="fw-bolder">送信しました。</div>
+325:                                        To activate this form, sign up at
+326:                                        <br />
+327:                                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+328:                                    </div>
+329:                                </div>
+330:                                <!-- Submit error message-->
+331:                                <!---->
+332:                                <!-- This is what your users will see when there is-->
+333:                                <!-- an error submitting the form-->
+334:                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3"></div>メッセージの送信に失敗しました</div>
+335:                                <!-- Submit Button-->
+336:                                <div class="d-grid text-white"><button class="btn btn-sub btn-xl disabled " id="submitButton" type="submit">確認</button></div>
+337:                            </form>
+338:                        </div>
+339:                    </div>
+340:                    <div class="row gx-4 gx-lg-5 justify-content-center">
+341:                        <div class="col-lg-4 text-center mb-5 mb-lg-0">
+342:                            <i class="bi-phone fs-2 mb-3 text-muted"></i>
+343:                            <div>042-512-9959</div>
+344:                        </div>
+345:                    </div>
+346:                </div>
+347:            </section>
+348:    
+349:            <!-- Footer -->
+350:            <footer class="bg-light py-5">
+351:                <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2022 - Company Name</div></div>
+352:            </footer>
+  
+app/views/revelum/index.html.erb:240: unknown regexp options - crat
+Started GET "/revelum/index" for ::1 at 2024-06-13 12:36:22 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 11.0ms | Allocations: 9058)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 34.1ms | Allocations: 34170)
+Completed 200 OK in 41ms (Views: 35.6ms | ActiveRecord: 1.2ms | Allocations: 40449)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 12:36:22 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 12:51:56 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 67.3ms | Allocations: 36833)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 78.2ms | Allocations: 62122)
+Completed 200 OK in 110ms (Views: 82.2ms | ActiveRecord: 1.3ms | Allocations: 85281)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 12:51:57 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started POST "/revelum/revelum/create" for ::1 at 2024-06-13 12:52:36 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/revelum/revelum/create"):
+  
+Started GET "/revelum/create" for ::1 at 2024-06-13 12:53:35 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/create"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 12:53:45 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 13.6ms | Allocations: 8602)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 30.3ms | Allocations: 33723)
+Completed 200 OK in 41ms (Views: 31.9ms | ActiveRecord: 2.0ms | Allocations: 40016)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 12:53:45 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started POST "/revelum/create" for ::1 at 2024-06-13 12:54:14 +0900
+Processing by RevelumController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"kamei", "email"=>"tajeru86@docomo.ne.jp", "phone"=>"0425249917", "message"=>"tesuta", "commit"=>"確認"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.0ms | Allocations: 774)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.1.3.3) lib/action_controller/metal/request_forgery_protection.rb:293:in `handle_unverified_request'
+actionpack (7.1.3.3) lib/action_controller/metal/request_forgery_protection.rb:388:in `handle_unverified_request'
+actionpack (7.1.3.3) lib/action_controller/metal/request_forgery_protection.rb:377:in `verify_authenticity_token'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.3.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.3) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.3) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.3) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.3) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.3) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.3) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.3) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.11) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.11) lib/rack/etag.rb:29:in `call'
+rack (3.0.11) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.11) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.11) lib/rack/method_override.rb:28:in `call'
+rack (3.0.11) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.11) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/revelum/index" for ::1 at 2024-06-13 12:57:59 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 68.0ms | Allocations: 36820)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 78.7ms | Allocations: 62176)
+Completed 200 OK in 108ms (Views: 81.9ms | ActiveRecord: 1.3ms | Allocations: 85323)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 12:57:59 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started POST "/revelum/create" for ::1 at 2024-06-13 12:58:27 +0900
+Processing by RevelumController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"kamei", "email"=>"tajeru86@docomo.ne.jp", "phone"=>"0425249917", "message"=>"tesuto", "commit"=>"確認"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms | Allocations: 759)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.1.3.3) lib/action_controller/metal/request_forgery_protection.rb:293:in `handle_unverified_request'
+actionpack (7.1.3.3) lib/action_controller/metal/request_forgery_protection.rb:388:in `handle_unverified_request'
+actionpack (7.1.3.3) lib/action_controller/metal/request_forgery_protection.rb:377:in `verify_authenticity_token'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.3.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.3) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.3) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.3) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.3) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.3) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.3) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.3) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.11) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.11) lib/rack/etag.rb:29:in `call'
+rack (3.0.11) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.11) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.11) lib/rack/method_override.rb:28:in `call'
+rack (3.0.11) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.11) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/revelum/index" for ::1 at 2024-06-13 13:00:20 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 13.9ms | Allocations: 8665)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 38.9ms | Allocations: 33851)
+Completed 200 OK in 58ms (Views: 40.9ms | ActiveRecord: 5.8ms | Allocations: 40158)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 13:00:21 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started POST "/revelum/create" for ::1 at 2024-06-13 13:00:52 +0900
+Processing by RevelumController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"take", "email"=>"tajeru86@docomo.ne.jp", "phone"=>"0425249917", "message"=>"tesuto", "commit"=>"確認"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.1ms | Allocations: 1092)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: contact):
+  
+app/controllers/revelum_controller.rb:9:in `create'
+Started GET "/revelum/index" for ::1 at 2024-06-13 13:16:27 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 61.8ms | Allocations: 36344)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 73.6ms | Allocations: 61700)
+Completed 200 OK in 109ms (Views: 79.2ms | ActiveRecord: 1.4ms | Allocations: 84854)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 13:16:27 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started POST "/revelum/create" for ::1 at 2024-06-13 13:16:49 +0900
+Processing by RevelumController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contact"=>{"name"=>"kamei"}, "email"=>"tajeru86@docomo.ne.jp", "phone"=>"0425249917", "message"=>"aaaaaaa", "commit"=>"確認"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 753)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.1.3.3) lib/action_controller/metal/request_forgery_protection.rb:293:in `handle_unverified_request'
+actionpack (7.1.3.3) lib/action_controller/metal/request_forgery_protection.rb:388:in `handle_unverified_request'
+actionpack (7.1.3.3) lib/action_controller/metal/request_forgery_protection.rb:377:in `verify_authenticity_token'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.3.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.3) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.3) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.3) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.3) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.3) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.3) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.3) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.11) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.11) lib/rack/etag.rb:29:in `call'
+rack (3.0.11) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.11) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.11) lib/rack/method_override.rb:28:in `call'
+rack (3.0.11) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.11) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/posts/index" for ::1 at 2024-06-13 13:22:57 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (3.4ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" IN (?, ?)[0m  [["post_id", 25], ["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 281.7ms | Allocations: 19639)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/application.html.erb (Duration: 539.1ms | Allocations: 74203)
+Completed 200 OK in 691ms (Views: 537.9ms | ActiveRecord: 22.8ms | Allocations: 99376)
+
+
+Started GET "/about/top" for ::1 at 2024-06-13 13:22:59 +0900
+Processing by AboutController#top as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering about/top.html.erb within layouts/application
+  Rendered about/top.html.erb within layouts/application (Duration: 5.5ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 5889)
+Completed 200 OK in 59ms (Views: 34.7ms | ActiveRecord: 0.2ms | Allocations: 6919)
+
+
+Started GET "/revelum/index" for ::1 at 2024-06-13 13:23:02 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 37.0ms | Allocations: 8890)
+  Rendered layout layouts/revelum.html.erb (Duration: 57.0ms | Allocations: 13449)
+Completed 200 OK in 62ms (Views: 58.7ms | ActiveRecord: 0.2ms | Allocations: 14432)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 13:23:02 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started POST "/revelum/create" for ::1 at 2024-06-13 13:23:25 +0900
+Processing by RevelumController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contact"=>{"name"=>"tajeru"}, "email"=>"tajeru86@docomo.ne.jp", "phone"=>"0425249917", "message"=>"aaaaa", "commit"=>"確認"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1119)
+
+
+  
+NameError (uninitialized constant RevelumController::Contact):
+  
+app/controllers/revelum_controller.rb:11:in `create'
+Started GET "/revelum/index" for ::1 at 2024-06-13 13:49:37 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 14.1ms | Allocations: 6377)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 37.6ms | Allocations: 31622)
+Completed 200 OK in 61ms (Views: 39.0ms | ActiveRecord: 10.3ms | Allocations: 37514)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 13:49:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 14:14:50 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 7.5ms | Allocations: 6381)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 24.6ms | Allocations: 31624)
+Completed 200 OK in 38ms (Views: 25.5ms | ActiveRecord: 7.1ms | Allocations: 37524)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 14:14:50 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 15:35:35 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 9.7ms | Allocations: 6398)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 34.6ms | Allocations: 31688)
+Completed 200 OK in 42ms (Views: 35.8ms | ActiveRecord: 1.8ms | Allocations: 37563)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 15:35:35 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 15:40:17 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 117.5ms | Allocations: 53948)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 128.2ms | Allocations: 79073)
+Completed 200 OK in 135ms (Views: 129.5ms | ActiveRecord: 1.5ms | Allocations: 85357)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 15:40:18 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 15:58:09 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 8.8ms | Allocations: 6748)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 25.3ms | Allocations: 32060)
+Completed 200 OK in 32ms (Views: 26.2ms | ActiveRecord: 1.9ms | Allocations: 37952)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 15:58:09 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:00:43 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 10.7ms | Allocations: 7034)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 52.1ms | Allocations: 32257)
+Completed 200 OK in 68ms (Views: 53.4ms | ActiveRecord: 1.7ms | Allocations: 38547)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:00:44 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:02:31 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 9.4ms | Allocations: 6745)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 24.5ms | Allocations: 31968)
+Completed 200 OK in 33ms (Views: 25.6ms | ActiveRecord: 1.5ms | Allocations: 38246)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:02:31 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:04:46 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 8.6ms | Allocations: 7053)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 25.4ms | Allocations: 32276)
+Completed 200 OK in 35ms (Views: 26.5ms | ActiveRecord: 1.4ms | Allocations: 38560)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:04:46 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:10:52 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 14.0ms | Allocations: 7645)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 38.9ms | Allocations: 32873)
+Completed 200 OK in 51ms (Views: 40.1ms | ActiveRecord: 2.0ms | Allocations: 38748)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:10:52 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:12:28 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 10.5ms | Allocations: 7644)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 39.1ms | Allocations: 32868)
+Completed 200 OK in 48ms (Views: 40.3ms | ActiveRecord: 1.2ms | Allocations: 39145)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:12:28 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:19:09 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 10.8ms | Allocations: 8248)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 29.9ms | Allocations: 33473)
+Completed 200 OK in 43ms (Views: 30.7ms | ActiveRecord: 7.0ms | Allocations: 39354)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:19:09 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:20:15 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 6.6ms | Allocations: 6420)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 19.8ms | Allocations: 31645)
+Completed 200 OK in 27ms (Views: 20.6ms | ActiveRecord: 2.2ms | Allocations: 37926)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:20:15 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:21:11 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 20.0ms | Allocations: 6421)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 57.6ms | Allocations: 31763)
+Completed 200 OK in 70ms (Views: 59.4ms | ActiveRecord: 1.4ms | Allocations: 38047)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:21:12 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:34:46 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 8.3ms | Allocations: 6425)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 25.3ms | Allocations: 31649)
+Completed 200 OK in 36ms (Views: 26.2ms | ActiveRecord: 1.4ms | Allocations: 37528)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:34:46 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:36:54 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 6.9ms | Allocations: 6429)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 19.3ms | Allocations: 31655)
+Completed 200 OK in 30ms (Views: 20.7ms | ActiveRecord: 1.4ms | Allocations: 37938)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:36:55 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:36:57 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 3.7ms | Allocations: 5843)
+  Rendered layout layouts/revelum.html.erb (Duration: 14.4ms | Allocations: 10039)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.1ms | Allocations: 10816)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:36:57 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:36:59 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 7.7ms | Allocations: 5843)
+  Rendered layout layouts/revelum.html.erb (Duration: 15.9ms | Allocations: 10038)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.1ms | Allocations: 10800)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:36:59 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:42:21 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 21.1ms | Allocations: 6429)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 49.0ms | Allocations: 31655)
+Completed 200 OK in 66ms (Views: 51.2ms | ActiveRecord: 2.0ms | Allocations: 37939)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:42:21 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/about" for ::1 at 2024-06-13 16:42:28 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/about"):
+  
+Started GET "/revelum/" for ::1 at 2024-06-13 16:46:51 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:46:56 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 7.0ms | Allocations: 6421)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 22.9ms | Allocations: 31646)
+Completed 200 OK in 31ms (Views: 23.6ms | ActiveRecord: 1.9ms | Allocations: 37873)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:46:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:47:34 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 6.1ms | Allocations: 6426)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 14.6ms | Allocations: 31649)
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 1.2ms | Allocations: 37945)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:47:34 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:50:43 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 7.0ms | Allocations: 6425)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 19.9ms | Allocations: 31688)
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 1.1ms | Allocations: 37991)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:50:43 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/posts/index" for ::1 at 2024-06-13 16:50:47 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (0.1ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" IN (?, ?)[0m  [["post_id", 25], ["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 19.8ms | Allocations: 13160)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 19507)
+Completed 200 OK in 40ms (Views: 27.0ms | ActiveRecord: 1.5ms | Allocations: 22129)
+
+
+Started GET "/about/top" for ::1 at 2024-06-13 16:50:50 +0900
+Processing by AboutController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering about/top.html.erb within layouts/application
+  Rendered about/top.html.erb within layouts/application (Duration: 0.7ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 5883)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 6845)
+
+
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:50:52 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 6.8ms | Allocations: 5842)
+  Rendered layout layouts/revelum.html.erb (Duration: 12.4ms | Allocations: 9954)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.1ms | Allocations: 10740)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:50:52 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:51:14 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 5.9ms | Allocations: 6425)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 14.4ms | Allocations: 31689)
+Completed 200 OK in 23ms (Views: 15.0ms | ActiveRecord: 1.4ms | Allocations: 37992)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:51:14 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:51:16 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 6.9ms | Allocations: 5843)
+  Rendered layout layouts/revelum.html.erb (Duration: 13.0ms | Allocations: 10050)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.1ms | Allocations: 10810)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:51:16 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:51:58 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 5.5ms | Allocations: 6423)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 18.1ms | Allocations: 31686)
+Completed 200 OK in 28ms (Views: 19.6ms | ActiveRecord: 1.3ms | Allocations: 37967)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:51:58 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:52:33 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 13.5ms | Allocations: 6425)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 32.0ms | Allocations: 31688)
+Completed 200 OK in 43ms (Views: 32.6ms | ActiveRecord: 1.8ms | Allocations: 37975)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:52:33 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:52:49 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 11.5ms | Allocations: 6422)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 24.5ms | Allocations: 31650)
+Completed 200 OK in 32ms (Views: 25.3ms | ActiveRecord: 1.4ms | Allocations: 37989)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:52:49 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:54:09 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 7.7ms | Allocations: 6463)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 27.4ms | Allocations: 31686)
+Completed 200 OK in 36ms (Views: 29.5ms | ActiveRecord: 1.3ms | Allocations: 37962)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:54:09 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:54:11 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 5.6ms | Allocations: 5855)
+  Rendered layout layouts/revelum.html.erb (Duration: 9.3ms | Allocations: 10050)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 10822)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:54:11 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:56:43 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 9.1ms | Allocations: 6462)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 40.1ms | Allocations: 31769)
+Completed 200 OK in 50ms (Views: 41.4ms | ActiveRecord: 2.4ms | Allocations: 38065)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:56:44 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:57:06 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 7.6ms | Allocations: 6462)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 20.8ms | Allocations: 31709)
+Completed 200 OK in 29ms (Views: 22.0ms | ActiveRecord: 1.6ms | Allocations: 38054)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:57:06 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:57:24 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 4.8ms | Allocations: 6461)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 17.8ms | Allocations: 31737)
+Completed 200 OK in 24ms (Views: 18.4ms | ActiveRecord: 1.4ms | Allocations: 38012)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:57:24 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 16:57:48 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 7.9ms | Allocations: 6464)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 30.4ms | Allocations: 31712)
+Completed 200 OK in 38ms (Views: 31.4ms | ActiveRecord: 1.5ms | Allocations: 38066)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 16:57:48 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 17:00:37 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 7.8ms | Allocations: 6465)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 501.8ms | Allocations: 36434)
+Completed 200 OK in 509ms (Views: 502.8ms | ActiveRecord: 1.3ms | Allocations: 42717)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 17:00:38 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 17:01:20 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 9.2ms | Allocations: 6464)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 48.4ms | Allocations: 31704)
+Completed 200 OK in 59ms (Views: 50.6ms | ActiveRecord: 1.4ms | Allocations: 37997)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 17:01:20 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 17:04:34 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 11.8ms | Allocations: 6464)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 394.8ms | Allocations: 36168)
+Completed 200 OK in 406ms (Views: 396.6ms | ActiveRecord: 1.8ms | Allocations: 42475)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 17:04:35 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 17:05:05 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 9.3ms | Allocations: 5855)
+  Rendered layout layouts/revelum.html.erb (Duration: 317.2ms | Allocations: 14652)
+Completed 200 OK in 320ms (Views: 317.5ms | ActiveRecord: 0.1ms | Allocations: 15412)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 17:05:05 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 17:06:04 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 8.3ms | Allocations: 5855)
+  Rendered layout layouts/revelum.html.erb (Duration: 360.7ms | Allocations: 14677)
+Completed 200 OK in 363ms (Views: 361.4ms | ActiveRecord: 0.1ms | Allocations: 15434)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 17:06:05 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 17:06:49 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 9.5ms | Allocations: 6465)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 27.5ms | Allocations: 31688)
+Completed 200 OK in 36ms (Views: 29.0ms | ActiveRecord: 1.9ms | Allocations: 37972)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 17:06:49 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 17:07:28 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 15.3ms | Allocations: 6464)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 42.2ms | Allocations: 31691)
+Completed 200 OK in 50ms (Views: 43.4ms | ActiveRecord: 1.5ms | Allocations: 37975)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 17:07:28 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 17:07:45 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 7.2ms | Allocations: 5855)
+  Rendered layout layouts/revelum.html.erb (Duration: 13.5ms | Allocations: 10050)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.1ms | Allocations: 10828)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 17:07:46 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 17:08:06 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 10.8ms | Allocations: 6465)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 25.9ms | Allocations: 31694)
+Completed 200 OK in 38ms (Views: 27.1ms | ActiveRecord: 2.1ms | Allocations: 37978)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 17:08:06 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/posts/index" for ::1 at 2024-06-13 17:08:07 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (0.1ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" IN (?, ?)[0m  [["post_id", 25], ["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 13158)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 19508)
+Completed 200 OK in 17ms (Views: 12.6ms | ActiveRecord: 1.1ms | Allocations: 22131)
+
+
+Started GET "/posts/index" for ::1 at 2024-06-13 17:08:09 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (0.2ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" IN (?, ?)[0m  [["post_id", 25], ["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2914)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 8645)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.5ms | Allocations: 9461)
+
+
+Started GET "/posts/index" for ::1 at 2024-06-13 17:09:51 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (0.1ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" IN (?, ?)[0m  [["post_id", 25], ["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 13067)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 40166)
+Completed 200 OK in 44ms (Views: 29.7ms | ActiveRecord: 2.5ms | Allocations: 48048)
+
+
+Started GET "/about/top" for ::1 at 2024-06-13 17:09:52 +0900
+Processing by AboutController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering about/top.html.erb within layouts/application
+  Rendered about/top.html.erb within layouts/application (Duration: 0.7ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 5917)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.1ms | Allocations: 6943)
+
+
+Started GET "/revelum/index" for ::1 at 2024-06-13 17:09:55 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 11.3ms | Allocations: 6420)
+  Rendered layout layouts/revelum.html.erb (Duration: 17.1ms | Allocations: 10894)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.1ms | Allocations: 11859)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 17:09:55 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/posts/index" for ::1 at 2024-06-13 17:09:58 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (0.1ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" IN (?, ?)[0m  [["post_id", 25], ["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2914)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 8701)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.3ms | Allocations: 9534)
+
+
+Started GET "/about/top" for ::1 at 2024-06-13 17:10:02 +0900
+Processing by AboutController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering about/top.html.erb within layouts/application
+  Rendered about/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5700)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 6485)
+
+
+Started GET "/revelum/index" for ::1 at 2024-06-13 17:11:11 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 9.5ms | Allocations: 5854)
+  Rendered layout layouts/revelum.html.erb (Duration: 17.8ms | Allocations: 9954)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.1ms | Allocations: 10737)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 17:11:11 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 17:12:41 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 11.5ms | Allocations: 6462)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 40.2ms | Allocations: 31686)
+Completed 200 OK in 57ms (Views: 44.2ms | ActiveRecord: 1.5ms | Allocations: 37966)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 17:12:41 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/posts/index" for ::1 at 2024-06-13 17:12:46 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:75:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mReply Load (0.1ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."post_id" IN (?, ?)[0m  [["post_id", 25], ["post_id", 23]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:38
+  Rendered posts/index.html.erb within layouts/application (Duration: 22.6ms | Allocations: 13179)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 19531)
+Completed 200 OK in 37ms (Views: 30.9ms | ActiveRecord: 1.7ms | Allocations: 22165)
+
+
+Started GET "/about/top" for ::1 at 2024-06-13 17:12:48 +0900
+Processing by AboutController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering about/top.html.erb within layouts/application
+  Rendered about/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 5886)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 6842)
+
+
+Started GET "/about/top" for ::1 at 2024-06-13 17:13:41 +0900
+Processing by AboutController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering about/top.html.erb within layouts/application
+  Rendered about/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 202)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 27173)
+Completed 200 OK in 31ms (Views: 22.5ms | ActiveRecord: 1.8ms | Allocations: 33486)
+
+
+Started GET "/about/top" for ::1 at 2024-06-13 17:14:13 +0900
+Processing by AboutController#top as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering about/top.html.erb within layouts/application
+  Rendered about/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 206)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 27272)
+Completed 200 OK in 25ms (Views: 13.7ms | ActiveRecord: 1.2ms | Allocations: 33644)
+
+
+Started GET "/revelum/index" for ::1 at 2024-06-13 17:14:16 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 11.8ms | Allocations: 6420)
+  Rendered layout layouts/revelum.html.erb (Duration: 19.4ms | Allocations: 10927)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.1ms | Allocations: 11899)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 17:14:16 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 17:15:04 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 37.0ms | Allocations: 6465)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 54.7ms | Allocations: 31692)
+Completed 200 OK in 65ms (Views: 56.3ms | ActiveRecord: 2.2ms | Allocations: 37987)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 17:15:04 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
