@@ -39772,3 +39772,211 @@ Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 01:01:19 +0900
   
 ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
   
+Started GET "/revelum/index" for ::1 at 2024-06-13 02:33:39 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 15.6ms | Allocations: 5914)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 39.6ms | Allocations: 31081)
+Completed 200 OK in 62ms (Views: 40.9ms | ActiveRecord: 9.5ms | Allocations: 36978)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 02:33:39 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 04:19:43 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 10.0ms | Allocations: 5910)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 32.4ms | Allocations: 31077)
+Completed 200 OK in 47ms (Views: 33.4ms | ActiveRecord: 7.8ms | Allocations: 36950)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 04:19:43 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 04:33:44 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 10.5ms | Allocations: 5928)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 30.3ms | Allocations: 31095)
+Completed 200 OK in 39ms (Views: 31.4ms | ActiveRecord: 2.1ms | Allocations: 36974)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 04:33:45 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 04:40:51 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 10.5ms | Allocations: 5929)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 33.0ms | Allocations: 31096)
+Completed 200 OK in 43ms (Views: 34.6ms | ActiveRecord: 2.7ms | Allocations: 36981)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 04:40:51 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 04:43:16 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 19.4ms | Allocations: 5306)
+  Rendered layout layouts/revelum.html.erb (Duration: 493.5ms | Allocations: 14096)
+Completed 200 OK in 504ms (Views: 496.3ms | ActiveRecord: 0.6ms | Allocations: 14853)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 04:43:17 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 04:43:49 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 12.7ms | Allocations: 5926)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 27.7ms | Allocations: 31119)
+Completed 200 OK in 66ms (Views: 35.1ms | ActiveRecord: 38.6ms | Allocations: 37400)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 04:43:49 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 05:02:35 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 67.8ms | Allocations: 42919)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 87.5ms | Allocations: 68131)
+Completed 200 OK in 99ms (Views: 88.8ms | ActiveRecord: 8.1ms | Allocations: 74019)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 05:02:35 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 05:03:49 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 8.3ms | Allocations: 6390)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 28.3ms | Allocations: 31558)
+Completed 200 OK in 39ms (Views: 29.3ms | ActiveRecord: 2.9ms | Allocations: 37831)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 05:03:49 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 05:11:53 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 15.0ms | Allocations: 6225)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 342.0ms | Allocations: 35860)
+Completed 200 OK in 361ms (Views: 343.1ms | ActiveRecord: 7.1ms | Allocations: 41770)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 05:11:54 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 05:17:53 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 5.5ms | Allocations: 3137)
+  Rendered layout layouts/revelum.html.erb (Duration: 5.6ms | Allocations: 3225)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 7.1ms | Allocations: 9087)
+
+
+  
+ActionView::Template::Error (The asset "revelum/super-maxy75.JPEG" is not present in the asset pipeline.
+):
+    12:           <div class="container ">
+    13: 
+    14:               <div class ="float_left container_img ">
+    15:               <div><%= image_tag 'revelum/super-maxy75.JPEG', class: 'img img_contain' %></div>
+    16:               </div>
+    17: 
+    18:               <div class ="container_sen float_left">
+  
+app/views/revelum/index.html.erb:15
+Started GET "/revelum/index" for ::1 at 2024-06-13 05:18:44 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 128.9ms | Allocations: 42661)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 166.7ms | Allocations: 67847)
+Completed 200 OK in 173ms (Views: 167.4ms | ActiveRecord: 0.3ms | Allocations: 68628)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 05:18:44 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
+Started GET "/revelum/index" for ::1 at 2024-06-13 12:06:44 +0900
+Processing by RevelumController#index as HTML
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/revelum.html.erb
+  Rendering revelum/index.html.erb within layouts/revelum
+  Rendered revelum/index.html.erb within layouts/revelum (Duration: 12.4ms | Allocations: 6418)
+Importmap skipped missing path: turbo.min.js
+Importmap skipped missing path: turbo.min.js
+  Rendered layout layouts/revelum.html.erb (Duration: 32.0ms | Allocations: 31585)
+Completed 200 OK in 53ms (Views: 33.4ms | ActiveRecord: 12.3ms | Allocations: 37470)
+
+
+Started GET "/revelum/js/scripts.js" for ::1 at 2024-06-13 12:06:44 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/revelum/js/scripts.js"):
+  
