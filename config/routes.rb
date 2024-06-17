@@ -19,4 +19,10 @@ Rails.application.routes.draw do
   post "question/ask" => "question#ask"
 
   get "about/top" => "about#top"
+
+
+
+  get 'revelum/index' => 'revelum#index'
+  post 'revelum/create' => 'revelum#create'
+
 end

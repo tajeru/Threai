@@ -1,0 +1,2 @@
+class RevelumController < ApplicationController
+end
